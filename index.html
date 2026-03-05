@@ -23,7 +23,6 @@
             <a href="#" class="logo">
                 <div class="logo-stack">
                     <span class="logo-main">TRACK TEAM<br>DENMARK</span>
-                    <span class="logo-sub">POWERED BY SANA | STARK</span>
                 </div>
             </a>
 
@@ -39,6 +38,7 @@
                     <li><a href="#vision">Vision</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#partners">Partners</a></li>
+                    <li><a href="news.html">News</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,13 +47,29 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
-            <div class="hero-bg" style="background-image: url('images/hero_cyclists.png');"></div>
+            <div class="hero-bg" style="background-image: url('images/teampresentation.jpg');"></div>
             <div class="hero-content reveal">
                 <h1>WE ARE<br><span class="text-orange">TRACK TEAM</span><br>DENMARK</h1>
-                <p class="hero-subtitle">Pushing the limits of speed and endurance.</p>
-                <a href="#about" class="btn btn-primary">Discover More</a>
+                <p class="hero-subtitle">Raising the bar for performance on the track</p>
             </div>
         </section>
+
+        <!-- News Overlay Window -->
+        <div id="news" class="news-overlay">
+            <div class="news-overlay-header">
+                <h3>LATEST NEWS</h3>
+                <button class="news-toggle" id="news-toggle">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+            </div>
+            <div class="news-overlay-content">
+                <!-- News Item -->
+                <article class="news-item">
+                    <span class="news-item-date">Mar 5</span>
+                    <h4 class="news-item-title">Gold, Silver and a World Record for Our TTD Riders</h4>
+                </article>
+            </div>
+        </div>
 
         <!-- Intro Section -->
         <section id="about" class="section section-dark">
@@ -61,15 +77,12 @@
                 <div class="content-box reveal-left">
                     <h2 class="section-title">INTRODUCING<br>THE ELITE</h2>
                     <div class="title-underline"></div>
-                    <p class="lead-text">Track Team Denmark represents the pinnacle of Danish track cycling performance.
+                    <p class="lead-text">Track Team Denmark brings together some of the world's most decorated track cyclists with Olympic, World, and European medals. Our mission is to build on these successes and push each rider even further, reaching new heights on the international stage.
                     </p>
-                    <p>Founded on principles of relentless dedication, scientific training, and an unwavering pursuit of
-                        perfection, our riders compete on the world's most demanding velodromes. We are more than a
-                        team; we are a movement aiming for gold status globally.</p>
                     <a href="#vision" class="btn btn-outline-orange mt-4">Our Mission</a>
                 </div>
                 <div class="image-box reveal-right">
-                    <img src="images/velodrome_empty1.png" alt="Velodrome Track"
+                    <img src="images/IMG-20251207-WA0047.jpg" alt="Velodrome Track"
                         class="rounded-img shadow-lg shadow-blur">
                 </div>
             </div>
@@ -87,10 +100,7 @@
                     <!-- Card 1 -->
                     <div class="vision-card hover-lift delay-100">
                         <i class="fa-solid fa-globe card-icon"></i>
-                        <p>By establishing the first ever Danish track cycling team we want to develop track cycling in
-                            Denmark but also on the international stage. With the World Championships on home soil in
-                            2024 and the very successful danish national track team it is the right time to start this
-                            project and support the development of the Danish track scene.</p>
+                        <p>By establishing the first ever Danish track cycling team we want to develop track cycling in Denmark but also on the international stage. With the World Championships on home soil in 2024 and the very successful danish national track team it was the right time to start this project in 2025 and support the development of the Danish track scene.</p>
                     </div>
                     <!-- Card 2 -->
                     <div class="vision-card hover-lift delay-200">
@@ -109,9 +119,7 @@
                     <!-- Card 4 -->
                     <div class="vision-card hover-lift delay-400">
                         <i class="fa-solid fa-bullseye card-icon"></i>
-                        <p>Our goal for the first season is to successfully establish the team in national and
-                            international races. Collective as well as individual development is close to our hearts,
-                            which is why each rider will receive their own program tailored to their goals.</p>
+                        <p>Our goal for the second season is to continue growing and build on the strong foundation we established in 2025. Both collective and individual development remain at the heart of our approach, which is why each rider will continue to receive a personalized program tailored to their goals.</p>
                     </div>
                 </div>
             </div>
@@ -258,9 +266,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-5 reveal-up delay-400">
-                    <a href="#" class="btn btn-outline-white">View Full Roster</a>
-                </div>
             </div>
         </section>
 
@@ -272,13 +277,20 @@
 
                 <div class="partners-grid mt-5">
                     <div class="partner-logo">
-                        <img src="sponsoren/STARK_DK_RGB-1-2048x411.png" alt="STARK" class="partner-logo-image">
+                        <a href="https://www.stark.dk/" target="_blank" rel="noopener noreferrer">
+                            <img src="sponsoren/STARK_DK_RGB-1-2048x411.png" alt="STARK" class="partner-logo-image">
+                        </a>
                     </div>
-                     <div class="partner-logo">
-                        <img src="sponsoren/PeterEllegaard_resized_web.png" alt="Peter Ellegaard" class="partner-logo-image">
-                        
+                    <div class="partner-logo">
+                        <a href="https://www.peterellegaard.dk/" target="_blank" rel="noopener noreferrer">
+                            <img src="sponsoren/PeterEllegaard_resized_web.png" alt="Peter Ellegaard" class="partner-logo-image">
+                        </a>
                     </div>
- 
+                    <div class="partner-logo">
+                        <a href="https://sana-hypoxi.dk/" target="_blank" rel="noopener noreferrer">
+                            <img src="sponsoren/Sanas_resized_web.png" alt="Sanas logo" class="partner-logo-image">
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -287,18 +299,15 @@
             <div class="container text-center">
                 <div class="title-underline center-underline"></div>
                 <div class="sponsor-box-grid mt-5">
-                    <div class="sponsor-box"><img src="sponsoren/Sanas_resized_web.png" alt="Sanas logo" class="sponsor-box-image"></div>
-                    <div class="sponsor-box"><img src="sponsoren/RaceClub_resized_web.png" alt="RaceClub logo" class="sponsor-box-image"></div>
-                    <div class="sponsor-box"><img src="sponsoren/Amundlogoresized_web.png" alt="Amund logo" class="sponsor-box-image"></div>
-                    <div class="sponsor-box"><img src="sponsoren/CO_logo_resized_web.png" alt="CO logo" class="sponsor-box-image"></div>
-                    <div class="sponsor-box"><img src="sponsoren/CS-logo_resized_web-1.png" alt="CS logo" class="sponsor-box-image"></div>
-                    <div class="sponsor-box"><img src="sponsoren/Cuore_logo.png" alt="Cuore logo" class="sponsor-box-image"></div>
-                    <div class="sponsor-box"><img src="sponsoren/DBC_resized_web.png" alt="DBC logo" class="sponsor-box-image"></div>
-                    <div class="sponsor-box"><img src="sponsoren/DCU_resized_web.png" alt="DCU logo" class="sponsor-box-image"></div>
+                    <div class="sponsor-box"><a href="https://cykelbanen.dk/" target="_blank" rel="noopener noreferrer"><img src="sponsoren/DBC_resized_web.png" alt="DBC logo" class="sponsor-box-image"></a></div>
+                    <div class="sponsor-box"><a href="https://cyklingodense.dk/" target="_blank" rel="noopener noreferrer"><img src="sponsoren/CO_logo_resized_web.png" alt="CO logo" class="sponsor-box-image"></a></div>
+                    <div class="sponsor-box"><a href="https://sonax.dk/" target="_blank" rel="noopener noreferrer"><img src="sponsoren/SONAX-Logo.png" alt="SONAX logo" class="sponsor-box-image"></a></div>
+                    <div class="sponsor-box"><a href="https://www.xn--aavdk-vra.dk/" target="_blank" rel="noopener noreferrer"><img src="sponsoren/AAV_Dæk_logo.png" alt="AAV Dæk logo" class="sponsor-box-image"></a></div>
+                    <div class="sponsor-box"><a href="https://ceramicspeed.com/" target="_blank" rel="noopener noreferrer"><img src="sponsoren/CS-logo_resized_web-1.png" alt="CS logo" class="sponsor-box-image"></a></div>
+                    <div class="sponsor-box"><a href="https://www.cyklingdanmark.dk/" target="_blank" rel="noopener noreferrer"><img src="sponsoren/DCU_resized_web.png" alt="DCU logo" class="sponsor-box-image"></a></div>
                     <div class="sponsor-box"><img src="sponsoren/Gudmand_resized_web-1.png" alt="Gudmand logo" class="sponsor-box-image"></div>
-                    <div class="sponsor-box"><img src="sponsoren/Njors_resized_web-2.png" alt="Njors logo" class="sponsor-box-image"></div>
-                    <div class="sponsor-box"><img src="sponsoren/Overspeed_resized_web-1.png" alt="Overspeed logo" class="sponsor-box-image"></div>
-                    <div class="sponsor-box"><img src="sponsoren/Virum_Tag_resized_web.png" alt="Virum Tag logo" class="sponsor-box-image"></div>
+                    <div class="sponsor-box"><a href="https://njors.dk/" target="_blank" rel="noopener noreferrer"><img src="sponsoren/Njors_resized_web-2.png" alt="Njors logo" class="sponsor-box-image"></a></div>
+                    <div class="sponsor-box"><a href="https://campione.dk/" target="_blank" rel="noopener noreferrer"><img src="sponsoren/campione.png" alt="Campione logo" class="sponsor-box-image"></a></div>
                 </div>
             </div>
         </section>
@@ -318,6 +327,26 @@
             </div>
         </section>
     </main>
+
+    <!-- News Popup Modal -->
+    <div id="news-modal" class="news-modal">
+        <div class="news-modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-inner">
+                <div class="modal-image" style="background-image: url('images/Worldrecord26.jpg');"></div>
+                <div class="modal-body">
+                    <span class="modal-badge">EUROPEAN CHAMPIONSHIPS</span>
+                    <h2>Gold, Silver and a World Record for Our TTD Riders</h2>
+                    <span class="modal-date">March 5, 2026</span>
+                    <p>The European Championships were a great success for the Danish team and our Track Team Denmark riders. In total, five riders from our team represented their countries in Konya, Turkey.</p>
+                    <p>Lasse Norman Leth, Robin Skivild, and Rasmus Lund claimed the European title in the team pursuit with an outstanding performance, even going under the world record.</p>
+                    <a href="news.html" class="btn btn-primary mt-4">View All News</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container footer-grid">

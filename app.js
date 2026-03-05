@@ -126,4 +126,72 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // News Overlay Toggle
+    const newsOverlay = document.getElementById('news');
+    const newsToggle = document.getElementById('news-toggle');
+    
+    if (newsToggle) {
+        newsToggle.addEventListener('click', () => {
+            newsOverlay.classList.toggle('collapsed');
+            const icon = newsToggle.querySelector('i');
+            if (newsOverlay.classList.contains('collapsed')) {
+                icon.classList.remove('fa-chevron-left');
+                icon.classList.add('fa-chevron-right');
+            } else {
+                icon.classList.remove('fa-chevron-right');
+                icon.classList.add('fa-chevron-left');
+            }
+        });
+    }
+
+    // Load More News Articles
+    const loadMoreBtn = document.querySelector('.load-more-btn');
+    const hiddenArticles = document.querySelectorAll('.news-article-card.hidden');
+
+    if (loadMoreBtn && hiddenArticles.length > 0) {
+        loadMoreBtn.addEventListener('click', () => {
+            hiddenArticles.forEach(article => {
+                article.classList.remove('hidden');
+            });
+            loadMoreBtn.style.display = 'none';
+        });
+    }
+
+    // News Modal Functionality
+    const newsModal = document.getElementById('news-modal');
+    const modalClose = document.querySelector('.modal-close');
+    const newsItems = document.querySelectorAll('.news-item');
+
+    // Open modal on news item click
+    newsItems.forEach(item => {
+        item.addEventListener('click', () => {
+            newsModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close modal on close button click
+    if (modalClose) {
+        modalClose.addEventListener('click', () => {
+            newsModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    // Close modal on background click
+    newsModal.addEventListener('click', (e) => {
+        if (e.target === newsModal) {
+            newsModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && newsModal.classList.contains('active')) {
+            newsModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
 });
