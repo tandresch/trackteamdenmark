@@ -1,1 +1,3 @@
 images/design_files/*
+.env
+node_modules

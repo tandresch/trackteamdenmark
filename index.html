@@ -7,6 +7,11 @@
     <title>Track Team Denmark | World Class Track Cycling</title>
     <meta name="description"
         content="Official website of Track Team Denmark. Follow our journey to the top of track cycling. powered by SANA, STARK, PETER ELLEGAARD">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="images/favicon/favicon-32x32.ico">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-150x150.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -355,6 +360,11 @@
                 </div>
                 <p class="text-gray-400 text-sm">Dedicated to the pursuit of speed, power, and the perfect lap on the
                     velodrome.</p>
+                    <p class="newsletter-comment text-sm mt-4">Register for our newsletter to get the latest team updates.</p>
+                    <form class="newsletter-form mt-2" novalidate>
+                        <input type="email" class="newsletter-input" name="newsletterEmail" placeholder="info@trackteamdenmark.dk" aria-label="Email address for newsletter" required>
+                        <button type="submit" class="newsletter-button" value="register">Register</button>
+                    </form>
                 <div class="footer-socials mt-4">
                     <a href="https://www.facebook.com/michelle.andres.71" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/trackteamdenmark/" target="_blank" rel="noopener noreferrer"><i
@@ -392,6 +402,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/instafeed.js@2.0.0"></script>
+    <script src="config.js"></script>
     <script src="app.js"></script>
 </body>
 

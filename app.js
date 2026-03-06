@@ -1,10 +1,100 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const newsletterEmailServiceConfig = {
+        apiEndpoint: window.NEWSLETTER_EMAIL_CONFIG?.apiEndpoint || '/api/newsletter'
+    };
+
+    const sendNewsletterRegistrationEmail = async (email) => {
+        const response = await fetch(newsletterEmailServiceConfig.apiEndpoint, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                subscriberEmail: email,
+                submittedAt: new Date().toISOString(),
+                pageUrl: window.location.href
+            })
+        });
+
+        if (!response.ok) {
+            const errorBody = await response.json().catch(() => ({}));
+            const detailedMessage = errorBody.details
+                ? `${errorBody.error || 'SMTP email sending failed'} (${errorBody.details})`
+                : (errorBody.error || 'SMTP email sending failed');
+            throw new Error(detailedMessage);
+        }
+
+        return response.json().catch(() => ({}));
+    };
+
     // Set Current Year in Footer
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
+
+    // Newsletter Registration
+    const newsletterForms = document.querySelectorAll('.newsletter-form');
+    newsletterForms.forEach(form => {
+        const emailInput = form.querySelector('.newsletter-input');
+        const registerButton = form.querySelector('.newsletter-button');
+        const messageElement = document.createElement('p');
+        messageElement.className = 'newsletter-message';
+        form.appendChild(messageElement);
+        let messageTimeoutId;
+
+        const showNewsletterMessage = (messageText, messageType) => {
+            messageElement.className = `newsletter-message newsletter-message-${messageType}`;
+            messageElement.textContent = messageText;
+
+            if (messageTimeoutId) {
+                clearTimeout(messageTimeoutId);
+            }
+
+            messageTimeoutId = setTimeout(() => {
+                messageElement.className = 'newsletter-message';
+                messageElement.textContent = '';
+            }, 10000);
+        };
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            if (!emailInput) {
+                return;
+            }
+
+            const email = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const isValidEmail = emailRegex.test(email);
+
+            if (!isValidEmail) {
+                console.error('Invalid email address for newsletter registration.');
+                showNewsletterMessage('Please enter a valid email address.', 'error');
+                emailInput.focus();
+                return;
+            }
+
+            try {
+                if (registerButton) {
+                    registerButton.disabled = true;
+                }
+
+                await sendNewsletterRegistrationEmail(email);
+                console.log('Newsletter registration email sent for:', email);
+                showNewsletterMessage('Thanks for registering for our newsletter!', 'success');
+                form.reset();
+            } catch (error) {
+                console.error('Newsletter email sending failed:', error);
+                showNewsletterMessage(error.message || 'Registration failed. Please try again shortly.', 'error');
+            } finally {
+                if (registerButton) {
+                    registerButton.disabled = false;
+                }
+            }
+        });
+    });
 
     // Mobile Navigation Toggle
     const navToggle = document.querySelector('.mobile-nav-toggle');
