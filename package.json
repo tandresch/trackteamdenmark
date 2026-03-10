@@ -5,7 +5,7 @@
   "description": "Track Team Denmark website with SMTP newsletter endpoint",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "sirv ./src public --cors --single --no-clear --port 8000",
     "healthcheck": "node healthcheck.js"
   },
   "dependencies": {
