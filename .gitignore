@@ -2,6 +2,8 @@ src/node_modules/
 /test-results/
 
 src/server.js
+src/package.json
+src/package-lock.json
 srv/package-lock.json
 srv/package.json
 src/.env
