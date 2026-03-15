@@ -1736,8 +1736,8 @@ img {
         right: max(0.5rem, env(safe-area-inset-right, 0px));
         bottom: 0.5rem;
         left: auto;
-        min-width: 280px;
-        width: min(90vw, 380px);
+        min-width: 210px;
+        width: min(67.5vw, 285px);
         max-width: calc(100vw - 1rem);
         flex-direction: column;
         align-items: stretch;
