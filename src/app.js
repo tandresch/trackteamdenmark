@@ -1,5 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const mobileJumpButton = document.createElement('button');
+    mobileJumpButton.type = 'button';
+    mobileJumpButton.className = 'mobile-jump-button';
+    mobileJumpButton.setAttribute('aria-label', 'Jump to top');
+    mobileJumpButton.innerHTML = '<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>';
+    document.body.appendChild(mobileJumpButton);
+
+    const toggleMobileJumpButton = () => {
+        const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
+        const shouldShow = isMobileViewport && window.scrollY > 260;
+        mobileJumpButton.classList.toggle('is-visible', shouldShow);
+    };
+
+    mobileJumpButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    window.addEventListener('scroll', toggleMobileJumpButton);
+    window.addEventListener('resize', toggleMobileJumpButton);
+    toggleMobileJumpButton();
+
     const newsletterEmailServiceConfig = {
         apiEndpoint: window.NEWSLETTER_EMAIL_CONFIG?.apiEndpoint || '/api/newsletter'
     };
@@ -210,6 +234,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
             feed.run();
         }
+    }
+
+    // Team member overlay selection
+    const memberWrappers = document.querySelectorAll('.member-img-wrapper');
+    if (memberWrappers.length > 0) {
+        const tapSelectionMode = window.matchMedia('(max-width: 768px), (hover: none), (pointer: coarse)');
+        let selectedWrapper = null;
+
+        const isTapSelectionMode = () => tapSelectionMode.matches;
+
+        const clearSelectedWrapper = () => {
+            if (selectedWrapper) {
+                selectedWrapper.classList.remove('is-selected');
+                selectedWrapper = null;
+            }
+        };
+
+        memberWrappers.forEach((wrapper) => {
+            wrapper.addEventListener('click', (event) => {
+                if (!isTapSelectionMode()) {
+                    return;
+                }
+
+                const clickedLink = event.target.closest('a');
+                if (clickedLink && wrapper.classList.contains('is-selected')) {
+                    return;
+                }
+
+                const shouldSelect = !wrapper.classList.contains('is-selected');
+                clearSelectedWrapper();
+
+                if (shouldSelect) {
+                    wrapper.classList.add('is-selected');
+                    selectedWrapper = wrapper;
+                }
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!isTapSelectionMode()) {
+                clearSelectedWrapper();
+                return;
+            }
+
+            const clickedWrapper = event.target.closest('.member-img-wrapper');
+            if (!clickedWrapper) {
+                clearSelectedWrapper();
+            }
+        });
+
+        tapSelectionMode.addEventListener('change', () => {
+            if (!isTapSelectionMode()) {
+                clearSelectedWrapper();
+            }
+        });
     }
 
     // Active Navigation Link Highlighting on Scroll
