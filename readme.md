@@ -23,7 +23,7 @@ After saving settings, redeploy (or restart) the Static Web App so the API picks
 
 
 ## Setup
-checkout
+checkout open terminal
 
 ```
 cd src
