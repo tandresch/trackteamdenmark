@@ -2112,9 +2112,11 @@ img {
     }
 
     .hero {
-        min-height: 500px;
-        height: 85vh;
-        height: 85dvh;
+        min-height: 100vh;
+        min-height: 100dvh;
+        height: 100vh;
+        height: 100dvh;
+        padding-bottom: 0;
     }
 
     .hero-bg {
@@ -2130,7 +2132,7 @@ img {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 90px;
+        bottom: 140px;
         margin: 0 auto;
         width: min(92vw, 800px);
         padding: 0 1rem;
@@ -2244,9 +2246,11 @@ img {
     }
 
     .hero {
-        min-height: 420px;
-        height: 80vh;
-        height: 80dvh;
+        min-height: 100vh;
+        min-height: 100dvh;
+        height: 100vh;
+        height: 100dvh;
+        padding-bottom: 0;
     }
 
     #home .hero-bg {
@@ -2254,7 +2258,7 @@ img {
     }
 
     #home .hero-content {
-        bottom: 70px;
+        bottom: 120px;
     }
 
     #home .hero-content h1 {
