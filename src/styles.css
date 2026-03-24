@@ -2126,14 +2126,14 @@ img {
         background-position: center 38%;
     }
 
-    #home.hero {
-        align-items: flex-end;
-        padding-bottom: clamp(1rem, 4vh, 2rem);
-    }
-
     #home .hero-content {
-        margin-top: 0;
-        margin-bottom: 25px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 90px;
+        margin: 0 auto;
+        width: min(92vw, 800px);
+        padding: 0 1rem;
     }
 
     #home .hero-content h1 {
@@ -2253,12 +2253,8 @@ img {
         background-position: center 34%;
     }
 
-    #home.hero {
-        padding-bottom: clamp(0.75rem, 3.5vh, 1.5rem);
-    }
-
     #home .hero-content {
-        margin-bottom: 25px;
+        bottom: 70px;
     }
 
     #home .hero-content h1 {
