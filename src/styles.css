@@ -2133,6 +2133,7 @@ img {
 
     #home .hero-content {
         margin-top: 0;
+        margin-bottom: -50px;
     }
 
     #home .hero-content h1 {
@@ -2254,6 +2255,10 @@ img {
 
     #home.hero {
         padding-bottom: clamp(0.75rem, 3.5vh, 1.5rem);
+    }
+
+    #home .hero-content {
+        margin-bottom: -50px;
     }
 
     #home .hero-content h1 {
