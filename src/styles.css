@@ -2106,14 +2106,20 @@ img {
         padding: 3rem 0;
     }
 
+    .header,
+    .header.scrolled {
+        border-bottom: none;
+    }
+
     .hero {
         min-height: 500px;
         height: 85vh;
         height: 85dvh;
     }
 
-    #home .hero-content {
-        margin-top: clamp(4rem, 14vh, 7rem);
+    .hero-bg {
+        top: -2px;
+        height: calc(100% + 2px);
     }
 
     .mobile-nav-toggle {
@@ -2216,10 +2222,6 @@ img {
         min-height: 420px;
         height: 80vh;
         height: 80dvh;
-    }
-
-    #home .hero-content {
-        margin-top: clamp(4.5rem, 18vh, 7.5rem);
     }
 
     .mt-mobile-2 {
