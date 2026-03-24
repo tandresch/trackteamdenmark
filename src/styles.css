@@ -2130,6 +2130,17 @@ img {
         margin-top: clamp(3.5rem, 12vh, 6rem);
     }
 
+    #home .hero-content h1 {
+        font-size: clamp(1.35rem, 6vw, 1.95rem);
+        line-height: 1.15;
+        margin-bottom: 0;
+    }
+
+    #home .hero-content h1 .text-orange {
+        display: block;
+        white-space: nowrap;
+    }
+
     .mobile-nav-toggle {
         display: inline-flex;
         z-index: 1200;
@@ -2238,6 +2249,10 @@ img {
 
     #home .hero-content {
         margin-top: clamp(4.5rem, 16vh, 7rem);
+    }
+
+    #home .hero-content h1 {
+        font-size: clamp(1.2rem, 6.4vw, 1.6rem);
     }
 
     .mt-mobile-2 {
