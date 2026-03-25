@@ -2147,6 +2147,11 @@ img {
         transition: none;
     }
 
+    .page-intro-title .section-title {
+        font-size: clamp(1.4rem, 6vw, 2rem);
+        margin-bottom: 0.5rem;
+    }
+
     .header,
     .header.scrolled {
         border-bottom: none;
@@ -2319,6 +2324,10 @@ img {
 
     .mt-mobile-2 {
         margin-top: 0.5rem;
+    }
+
+    .page-intro-title .section-title {
+        font-size: clamp(1.25rem, 7vw, 1.6rem);
     }
 }
 
