@@ -1647,6 +1647,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: var(--space-lg);
+    align-self: center;
 }
 
 .featured-news-image {

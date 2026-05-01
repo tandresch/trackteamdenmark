@@ -381,6 +381,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDetails = document.getElementById('modal-details');
 
     const newsModalEntries = {
+        'world-cups-asia': {
+            image: 'images/Weltcup_HK26169.jpg',
+            badge: 'RACE RESULTS',
+            title: 'Two podiums at the World Cups in Asia',
+            date: 'April 22, 2026',
+            excerpt: 'Robin Skivild, Oskar Winkler and Michelle Andres travelled to the track World Cups in Hong Kong and Nilai, where they each secured a sensational podium finish.',
+            details: 'Skivild and Winkler achieved second place in the team pursuit in Hong Kong. One week later, Michelle Andres secured a strong third place in the Madison in Nilai, marking her second World Cup podium.'
+        },
+        'ghent': {
+            image: 'images/Gent_26_Scratchresized.jpg',
+            badge: 'RACE RESULTS',
+            title: 'Double victory at the International Track Meeting in Ghent',
+            date: 'April 15, 2026',
+            excerpt: 'The European track season kicked off in mid-April in Ghent, Belgium, with a squad combining experienced riders and young talents.',
+            details: 'The team delivered an active and aggressive performance, highlighted by a one-two finish in the men\'s scratch race: Lasse Norman Leth won ahead of Rasmus Lund, securing the team\'s first UCI C1 victory of the season.'
+        },
         'team-presentation': {
             image: 'images/Teampresentation2.jpg',
             badge: 'TEAM NEWS',
