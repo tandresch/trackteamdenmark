@@ -391,6 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'ghent': {
             image: 'images/Gent_26_Scratchresized.jpg',
+            imagePosition: 'center 28%',
             badge: 'RACE RESULTS',
             title: 'Double victory at the International Track Meeting in Ghent',
             date: 'April 15, 2026',
@@ -421,6 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (modalImage) {
             modalImage.style.backgroundImage = `url('${entry.image}')`;
+            modalImage.style.backgroundPosition = entry.imagePosition || 'center center';
         }
         if (modalBadge) {
             modalBadge.textContent = entry.badge;
