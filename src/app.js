@@ -382,6 +382,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalLink = document.getElementById('modal-link');
 
     const newsModalEntries = {
+        'german-bahnen-tournee': {
+            image: 'images/IMG-20251207-WA0047_resized.jpg',
+            imagePosition: 'center center',
+            badge: 'RACE RESULTS',
+            title: 'Eight UCI podiums across the German Bahnen-Tournee',
+            date: 'June 29, 2026',
+            excerpt: 'The German Bahnen-Tournee marked a strong and consistent performance across five race days, with the team collecting a total of eight UCI podium finishes and delivering competitive rides from start to finish.',
+            details: 'Across all venues, the riders showed depth, resilience and a clear ability to perform at a high international level throughout a demanding racing block. The tour opened in Öschelbronn with an immediate highlight, as Rasmus Lund powered to victory in the men’s C2 points race. Kieran Riley also impressed on day one, crossing the line first in the men’s elimination race after a tactically strong ride, ultimately being classified 2nd following a jury decision. Momentum continued into the following rounds in Oberhausen, Dudenhofen and Darmstadt, where the team repeatedly featured in the top ranks across multiple disciplines. Across the five race days, the team’s combined results reflect a total of eight UCI podium finishes and a strong collective performance across all events and disciplines.',
+            link: 'news.html#german-bahnen-tournee'
+        },
         'prague-podiums': {
             image: 'images/Team_Prag.jpg',
             imagePosition: 'center center',
