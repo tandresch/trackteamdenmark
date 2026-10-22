@@ -382,6 +382,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalLink = document.getElementById('modal-link');
 
     const newsModalEntries = {
+        'shanghai-world-championships': {
+            image: 'images/Worldrecord26.jpg',
+            imagePosition: 'center top',
+            badge: 'WORLD CHAMPIONSHIPS',
+            title: 'Two World Titles and a Silver Medal for Denmark in Shanghai',
+            date: 'October 18, 2026',
+            excerpt: 'Our Track Team Denmark riders enjoyed an outstanding week at the UCI Track Cycling World Championships in Shanghai, China, bringing home two world titles and a silver medal. It was a highly successful championship and the perfect start to the Olympic qualification period for Los Angeles 2028.',
+            details: 'The Danish men\'s team pursuit squad secured their fourth consecutive world title, while Frederik Rodenberg claimed silver in the individual pursuit. Lasse Norman Leth and Carl-Frederik Bevort also won the Madison world title on the last day.',
+            link: 'news.html#shanghai-world-championships'
+        },
         'german-bahnen-tournee': {
             image: 'images/BahnenTournee4_16x9.jpg',
             imagePosition: 'top center',
