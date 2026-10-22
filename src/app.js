@@ -406,10 +406,10 @@ document.addEventListener('DOMContentLoaded', () => {
             image: 'images/Rodenberg_podium169.jpeg',
             imagePosition: 'center center',
             badge: 'RACE RESULTS',
-            title: 'Strong Results for Track Team Denmark in Prostějov',
+            title: '6 UCI podiums in Prostějov',
             date: 'October 22, 2026',
             excerpt: 'Track Team Denmark enjoyed several successful days of racing in Prostějov, Czech Republic, with multiple victories and podium finishes across the programme. Frederik Rodenberg was among the standout performers, securing two wins and three additional podium places over the course of the competition.',
-            details: 'One of the highlights was the Madison, where Rodenberg teamed up with Robin Skivild to claim second place after a strong performance. Laura Auerbach-Lind also stepped onto the podium in the women\'s Madison, finishing among the top teams alongside Ellen Klinge. Meanwhile, Lasse Norman Leth narrowly missed out on a podium finish in the Points Race, crossing the line in fourth place.',
+            details: 'The team also produced several notable performances, including a strong Madison result and a fourth-place finish in the Points Race.',
             link: 'news.html#prostejov-results'
         },
         'ghent': {
