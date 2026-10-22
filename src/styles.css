@@ -1119,6 +1119,11 @@ img {
     transition: transform var(--transit-slow), opacity var(--transit-normal);
 }
 
+.fredrik-portrait {
+    object-position: center 18%;
+    transform: scale(1.08);
+}
+
 .member-overlay {
     position: absolute;
     inset: 0;
