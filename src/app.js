@@ -383,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const newsModalEntries = {
         'shanghai-world-championships': {
-            image: 'images/Worldrecord26.jpg',
+            image: 'images/WM_TP_2026_jubel.jpg',
             imagePosition: 'center top',
             badge: 'WORLD CHAMPIONSHIPS',
             title: 'Two World Titles and a Silver Medal for Denmark in Shanghai',
