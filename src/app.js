@@ -402,16 +402,6 @@ document.addEventListener('DOMContentLoaded', () => {
             details: 'Across all venues, the riders showed depth, resilience and a clear ability to perform at a high international level throughout a demanding racing block in the heat of Germany.',
             link: 'news.html#german-bahnen-tournee'
         },
-        'prague-podiums': {
-            image: 'images/Team_Prag.jpg',
-            imagePosition: 'center center',
-            badge: 'RACE RESULTS',
-            title: 'Six podium finishes in Prague',
-            date: 'May 14, 2026',
-            excerpt: 'The Track Team Denmark can look back on a highly successful UCI CL1 weekend in Prague, where the team delivered strong performances across multiple disciplines and made a solid mark on the international stage.',
-            details: '',
-            link: 'news.html#prague-podiums'
-        },
         'prostejov-results': {
             image: 'images/Rodenberg_podium169.jpeg',
             imagePosition: 'center center',
